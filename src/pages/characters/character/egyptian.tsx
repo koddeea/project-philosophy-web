@@ -6,14 +6,14 @@ import { useScrollTop } from '@/hooks/use-scroll-top';
 import TransitionLayout from '@/layouts/animations/transition-layout';
 import { RoutesPaths } from '@/routes/routes-paths';
 
-import Picture from '/src/features/characters/buddhism/assets/images/buddhism.webp';
-import Picture2 from '/src/features/characters/buddhism/assets/images/2.webp';
+import Picture2 from '/src/features/characters/egyptian/assets/images/1.webp';
+import Picture from '/src/features/characters/egyptian/assets/images/egyptian.webp';
 
 
 import MarkdownRenderer from '@/components/markdown-renderer';
-import { BuddhismText } from '@/features/characters/buddhism/assets/texts/buddhism-text';
+import { EgyptianTexts } from '@/features/characters/egyptian/assets/texts/egyptian-texts';
 
-const Buddhism = () => {
+const Egyptian = () => {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -61,8 +61,8 @@ const Buddhism = () => {
             path: RoutesPaths.CHARACTERS.CHARACTERS.path
         },
         {
-            name: RoutesPaths.CHARACTERS.BUDDHISM.title,
-            path: RoutesPaths.CHARACTERS.BUDDHISM.path
+            name: RoutesPaths.CHARACTERS.EQYPTIAN.title,
+            path: RoutesPaths.CHARACTERS.EQYPTIAN.path
         }
     ]
 
@@ -71,7 +71,7 @@ const Buddhism = () => {
             <div className='mt-16 mx-3'>
                 <NavTrail elements={elements} />
 
-                <h1 className='text-white text-4xl font-bold'>{RoutesPaths.CHARACTERS.BUDDHISM.title}</h1>
+                <h1 className='text-white text-4xl font-bold'>{RoutesPaths.CHARACTERS.EQYPTIAN.title}</h1>
 
                 <div ref={container} className="-mt-8 h-[300vh]">
                     <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
@@ -84,11 +84,11 @@ const Buddhism = () => {
                 </div>
 
                 <div className='text-white mt-[10vh] container characters-text'>
-                    <MarkdownRenderer texts={BuddhismText} />
+                    <MarkdownRenderer texts={EgyptianTexts} />
                 </div>
             </div >
         </>
     );
 }
 
-export default TransitionLayout(Buddhism);
+export default TransitionLayout(Egyptian);

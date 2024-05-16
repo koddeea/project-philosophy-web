@@ -7,6 +7,7 @@ import TransitionLayout from '@/layouts/animations/transition-layout';
 import { RoutesPaths } from '@/routes/routes-paths';
 
 import Picture from '/src/features/characters/catholicism/assets/images/catholicism.webp';
+import Picture1 from '/src/features/characters/catholicism/assets/images/1.webp';
 
 import MarkdownRenderer from '@/components/markdown-renderer';
 import { CatholicismTexts } from '@/features/characters/catholicism/assets/texts/catholicism-texts';
@@ -32,22 +33,22 @@ const Catholicism = () => {
                 imgClasses: "rounded-full w-[50vw] h-[25vh] object-top"
             },
             {
-                src: Picture,
+                src: Picture1,
                 scale: scale6,
                 imgClasses: "rounded-xl bottom-[65vh] left-0 w-[70vw] h-[30vh] object-top"
             },
             {
-                src: Picture,
+                src: Picture1,
                 scale: scale8,
                 imgClasses: "rounded-xl top-[65vh] left-0 w-[100vw] h-[15vh] object-bottom"
             },
             {
-                src: Picture,
+                src: Picture1,
                 scale: scale5,
                 imgClasses: "rounded-xl top-[37.5vh] left-0 w-[20vw] h-[20.5vh] object-left"
             },
             {
-                src: Picture,
+                src: Picture1,
                 scale: scale6,
                 imgClasses: "rounded-xl bottom-[37.5vh] right-0 w-[20vw] h-[37.5vh] object-right"
             }

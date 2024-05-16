@@ -24,6 +24,9 @@ import Buddhism from "./pages/characters/character/buddhism";
 import HorizontalScroll from "./pages/tests/horizontal-scroll";
 import { RoutesPaths } from "./routes/routes-paths";
 import Test1 from "./pages/tests/test1";
+import Egyptian from "./pages/characters/character/egyptian";
+import Masai from "./pages/characters/character/masai";
+import Maya from "./pages/characters/character/maya";
 
 export default function App() {
     const location = useLocation();
@@ -52,9 +55,9 @@ export default function App() {
         requestAnimationFrame(raf)
     }, [])
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, [location]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
 
 
     return (
@@ -76,6 +79,9 @@ export default function App() {
 
                         <Route path={RoutesPaths.CHARACTERS.CATHOLICISM.path} element={<Catholicism />} />
                         <Route path={RoutesPaths.CHARACTERS.BUDDHISM.path} element={<Buddhism />} />
+                        <Route path={RoutesPaths.CHARACTERS.EQYPTIAN.path} element={<Egyptian />} />
+                        <Route path={RoutesPaths.CHARACTERS.MASAI.path} element={<Masai />} />
+                        <Route path={RoutesPaths.CHARACTERS.MAYA.path} element={<Maya />} />
                     </Route>
 
                     <Route path={RoutesPaths.ABOUT_PROJECT.path} element={<AboutProject />} />
@@ -90,3 +96,4 @@ export default function App() {
         </AnimatePresence>
     );
 }
+

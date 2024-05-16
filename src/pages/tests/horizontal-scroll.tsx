@@ -1,9 +1,20 @@
 import { RoutesPaths } from "@/routes/routes-paths";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-import Picture from '/src/features/characters/catholicism/assets/images/catholicism.webp';
+import MarkdownRenderer from "@/components/markdown-renderer";
+import PictureBuddhism from '/src/features/characters/buddhism/assets/images/buddhism.webp';
+import PictureCatholicism from '/src/features/characters/catholicism/assets/images/catholicism.webp';
+import PictureEgyptian from '/src/features/characters/egyptian/assets/images/egyptian.webp';
+import PictureMasai from '/src/features/characters/masai/assets/images/masai.webp';
+import PictureMaya from '/src/features/characters/maya/assets/images/maya.webp';
+
+
+const text = `
+> "Preocuparse por los años y los siglos en que ya no estaremos entre los vivos es como preocuparse por los años que han precedido nuestro nacimiento. Ni antes nos dolió, ni después nos dolerá."  
+> – Lucrecio
+`;
 
 interface HorizontalScrollProps {
     className?: string;
@@ -13,6 +24,10 @@ const HorizontalScroll = ({ className }: HorizontalScrollProps) => {
     return (
         <div className={className}>
             <HorizontalScrollCarousel />
+
+            <div className='text-white mt-[5vh] container characters-text'>
+                <MarkdownRenderer texts={text} />
+            </div>
         </div>
     );
 };
@@ -75,27 +90,27 @@ type CardType = {
 const cards: CardType[] = [
     {
         path: RoutesPaths.CHARACTERS.CATHOLICISM.path,
-        imageUrl: Picture,
+        imageUrl: PictureCatholicism,
         title: "CATOLICISMO",
     },
     {
         path: RoutesPaths.CHARACTERS.BUDDHISM.path,
-        imageUrl: Picture,
-        title: "Budismo",
+        imageUrl: PictureBuddhism,
+        title: "BUDISMO",
     },
     {
-        path: "",
-        imageUrl: Picture,
-        title: "Title 3",
+        path: RoutesPaths.CHARACTERS.EQYPTIAN.path,
+        imageUrl: PictureEgyptian,
+        title: "EGIPCIO",
     },
     {
-        path: "",
-        imageUrl: Picture,
-        title: "Title 4",
+        path: RoutesPaths.CHARACTERS.MASAI.path,
+        imageUrl: PictureMasai,
+        title: "MASAI",
     },
     {
-        path: "",
-        imageUrl: Picture,
-        title: "Title 5",
+        path: RoutesPaths.CHARACTERS.MAYA.path,
+        imageUrl: PictureMaya,
+        title: "MAYA",
     },
 ];
