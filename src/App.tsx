@@ -1,0 +1,92 @@
+
+import { useLocation, useNavigate } from "react-router-dom";
+
+import { AnimatePresence } from "framer-motion";
+import Lenis from "lenis";
+import { useEffect } from "react";
+
+
+import { Route, Routes } from "react-router-dom";
+
+
+import FullScreenLayout from "@/layouts/full-screen-layout";
+import MainLayout from "@/layouts/main-layout";
+import Catholicism from "@/pages/characters/character/catholicism";
+import Characters from "@/pages/characters/characters";
+import Home from "@/pages/home";
+import Intro from "@/pages/intro";
+import NotFound from "@/pages/not-found";
+
+
+import AboutProject from "@/pages/about-project";
+import { useRedirect } from "./contexts/RedirectContext";
+import Buddhism from "./pages/characters/character/buddhism";
+import HorizontalScroll from "./pages/tests/horizontal-scroll";
+import { RoutesPaths } from "./routes/routes-paths";
+import Test1 from "./pages/tests/test1";
+
+export default function App() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { hasEntered, setHasEntered, setPreviousPath } = useRedirect();
+
+    useEffect(() => {
+        if (location.pathname !== '/') {
+            setPreviousPath(location.pathname);
+        }
+
+        if (!hasEntered) {
+            setHasEntered(true);
+            navigate('/');
+        }
+    }, [location]);
+
+    useEffect(() => {
+        const lenis = new Lenis();
+
+        function raf(time: any) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    }, [])
+
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [location]);
+
+
+    return (
+        <AnimatePresence mode="wait">
+            <Routes location={location} key={location.key}>
+                <Route path="*" element={<NotFound />}></Route>
+
+                <Route path="/horizontal-scroll" element={<HorizontalScroll />} />
+
+                <Route element={<FullScreenLayout />}>
+                    <Route path={RoutesPaths.INTRO.path} element={<Intro />} />
+                </Route>
+
+                <Route element={<MainLayout />}>
+                    <Route path={RoutesPaths.HOME.path} element={<Home />} />
+
+                    <Route path={RoutesPaths.CHARACTERS.CHARACTERS.path}>
+                        <Route index element={<Characters />} />
+
+                        <Route path={RoutesPaths.CHARACTERS.CATHOLICISM.path} element={<Catholicism />} />
+                        <Route path={RoutesPaths.CHARACTERS.BUDDHISM.path} element={<Buddhism />} />
+                    </Route>
+
+                    <Route path={RoutesPaths.ABOUT_PROJECT.path} element={<AboutProject />} />
+                </Route>
+
+                <Route path="tests">
+                    <Route element={<FullScreenLayout />}>
+                        <Route path="test1" element={<Test1 />} />
+                    </Route>
+                </Route>
+            </Routes>
+        </AnimatePresence>
+    );
+}
