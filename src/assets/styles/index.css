@@ -25,8 +25,7 @@
 
 @font-face {
 	font-family: "Graphik";
-	src: url("/src/assets/fonts/graphik/GraphikExtraLight.otf")
-		format("opentype");
+	src: url("/src/assets/fonts/graphik/GraphikExtraLight.otf") format("opentype");
 	font-weight: 200;
 }
 
@@ -302,7 +301,7 @@ body {
 	}
 
 	ol {
-        @apply list-decimal list-inside mb-3;
+		@apply list-decimal list-inside mb-3;
 	}
 	/* Estilos para li */
 

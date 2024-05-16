@@ -7,6 +7,7 @@ import fog_animation4 from '/src/assets/videos/fog_animation4.mp4';
 import depth_map from '/src/features/intro/assets/images/depth_map.webp';
 import image_end from '/src/features/intro/assets/images/image_end.webp';
 import image_start from '/src/features/intro/assets/images/image_start.webp';
+import music from '/src/features/intro/assets/sounds/intro_music.ogg';
 
 import MultipleFadeAnimation from '@/components/animations/multiple-fade-animation';
 import ButtonCircleAnimated from '@/components/ui-animated/button-circle-animated';
@@ -290,7 +291,7 @@ function Intro() {
                             : <VolumeX size={16} strokeWidth={1.5} />}
 
                         <audio ref={audioRef} loop>
-                            <source src="/src/features/intro/assets/sounds/intro_music.ogg" />
+                            <source src={music} />
                         </audio>
                     </ButtonCircleAnimated>
                 </motion.div>
