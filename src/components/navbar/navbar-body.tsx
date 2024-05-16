@@ -35,7 +35,7 @@ export default function NavbarBody() {
                                     to={path}
                                 >
                                     <motion.div
-                                        className={`m-0 flex text-3xl pr-7 pb-7 lg:pb-20 font-graphik font-extralight lg:text-[5vw] lg:pr-[2vw]`}
+                                        className={`m-0 flex text-2xl pr-7 pb-7 lg:pb-20 font-graphik font-extralight lg:text-[5vw] lg:pr-[2vw]`}
                                         onMouseOver={() => { setSelectedLink({ isActive: true, index }) }}
                                         onMouseLeave={() => { setSelectedLink({ isActive: false, index }) }}
                                         variants={blur}
