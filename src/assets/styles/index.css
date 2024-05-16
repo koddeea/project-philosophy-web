@@ -25,7 +25,7 @@
 
 @font-face {
 	font-family: "Graphik";
-	src: url("@/assets/fonts/graphik/GraphikExtraLight.otf") format("opentype");
+	src: url("/src/assets/fonts/graphik/GraphikThin.otf") format("opentype");
 	font-weight: 200;
 }
 
