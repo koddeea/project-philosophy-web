@@ -31,8 +31,7 @@ function Intro() {
         "La muerte, cansada de ser considerada siempre el final de la existencia, desafía a cinco civilizaciones.",
         "Cada una, variadas en cultura y tiempo, son impuestas a desafíos de ingenio y moralidad, enfrentando y redescubriendo a la misma Muerte.",
         "La vida interviene, a veces cruel en su indiferencia o magnánima en su gracia, dotó a cada civilización con fe y creencias propias.",
-        "En este juego eterno entre  Muerte y  Vida, el destino de los mortales pende de un hilo, aventurándose en el intrincado laberinto del destino y libre albedrío.",
-        "G r u p o 5 <br/> presenta"
+        "En este juego eterno entre  Muerte y  Vida, el destino de los mortales pende de un hilo, aventurándose en el intrincado laberinto del destino y libre albedrío."
     ];
 
     const scrollRef = useRef<HTMLDivElement | null>(null);
