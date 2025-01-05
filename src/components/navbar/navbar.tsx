@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavbarBody from './navbar-body';
+import { RoutesPaths } from "@/routes/routes-paths";
 
 export default function Navbar() {
     const [isActive, setIsActive] = useState(false);
@@ -41,10 +42,10 @@ export default function Navbar() {
             }}
         >
             <div className="flex justify-center relative uppercase text-xs font-normal">
-                <Link to="/" className="absolute left-0 top-1/2 -translate-y-1/2 font-sispany font-bold select-none md:text-lg">G r u p o &nbsp; 5</Link>
+                <Link to={RoutesPaths.HOME.path} className="absolute left-0 top-1/2 -translate-y-1/2 font-sispany font-bold select-none md:text-lg">I N I C I O</Link>
                 <motion.div
                     onClick={() => setIsActive(!isActive)}
-                    className="flex items-center justify-center gap-2 cursor-pointer w-full h-full"
+                    className="flex items-center justify-center gap-2 cursor-pointer h-[16px]"
                 >
                     <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
                     <div className="relative flex items-center">

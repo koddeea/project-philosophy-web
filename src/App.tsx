@@ -19,14 +19,14 @@ import NotFound from "@/pages/not-found";
 
 
 import AboutProject from "@/pages/about-project";
-import { useRedirect } from "./contexts/RedirectContext";
-import Buddhism from "./pages/characters/character/buddhism";
-import HorizontalScroll from "./pages/tests/horizontal-scroll";
-import { RoutesPaths } from "./routes/routes-paths";
-import Test1 from "./pages/tests/test1";
-import Egyptian from "./pages/characters/character/egyptian";
-import Masai from "./pages/characters/character/masai";
-import Maya from "./pages/characters/character/maya";
+import { useRedirect } from "@/contexts/RedirectContext";
+import Buddhism from "@/pages/characters/character/buddhism";
+import HorizontalScroll from "@/pages/tests/horizontal-scroll";
+import { RoutesPaths } from "@/routes/routes-paths";
+import Test1 from "@/pages/tests/test1";
+import Egyptian from "@/pages/characters/character/egyptian";
+import Masai from "@/pages/characters/character/masai";
+import Maya from "@/pages/characters/character/maya";
 
 export default function App() {
     const location = useLocation();

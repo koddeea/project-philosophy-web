@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { translate } from "./navbar/navbar-anim";
+import { translate } from "@/components/navbar/navbar-anim";
+
 
 export default function GetChars(word: string) {
     let chars: React.ReactElement[] = [];

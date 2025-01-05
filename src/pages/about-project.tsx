@@ -4,16 +4,11 @@ import TransitionLayout from "@/layouts/animations/transition-layout";
 const AboutProjectText = `
 ### SOBRE EL PROYECTO
 
-Este proyecto se ha realizado por el GRUPO 5 de la asignatura de Filosofía de la Ciencia, del grado de Arqueología de la Universidad de Granada. El objetivo de esta página es utilizar las actuales herramientas digitales para transmitir una forma de divulgación en la educación que involucre tanto los juegos como el razonamiento crítico.
+Este proyecto se ha realizado con el propósito de utilizar las actuales herramientas digitales para transmitir una forma de divulgación en la educación que involucre tanto los juegos como el razonamiento crítico.
 
 La idea de un rol en el que los personajes sean los propios estudiantes, estimula la participación más activa y decidida; se pasa de un espectador a una participación completa en la toma de decisiones para el desarrollo de la historia. Al interpretar una de las sociedades seleccionadas, los estudiantes deben actuar acorde a las características de las mismas. Esto lleva a una lectura del contenido sobre sus particularidades y creencias.
 
 No hay un ganador en este juego, no buscamos la predominancia de una sociedad sobre otra. Al contrario, intentamos que se reflejen las similitudes entre ellas. Es la Vida la que nos separa, su influencia nos aleja unos de otros, pero es ante la Muerte donde nos reencontramos en igualdad.
-
-- Irene Blanco García
-- Danny Alexander Guerrero Guerrero
-- Drew Lindsay Sepúlveda Sáenz
-- María Emilia Toledo
 `;
 
 const AboutProject = () => {

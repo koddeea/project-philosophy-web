@@ -31,27 +31,27 @@ const Masai = () => {
             {
                 src: Picture,
                 scale: scale4,
-                imgClasses: "rounded-full w-[50vw] h-[25vh] object-top"
+                imgClasses: "rounded-full w-[50%] h-[25vh] object-top"
             },
             {
                 src: Picture2,
                 scale: scale6,
-                imgClasses: "rounded-xl bottom-[65vh] left-0 w-[70vw] h-[30vh] object-top"
+                imgClasses: "rounded-xl bottom-[65vh] left-0 w-[70%] h-[30vh] object-top"
             },
             {
                 src: Picture2,
                 scale: scale8,
-                imgClasses: "rounded-xl top-[65vh] left-0 w-[100vw] h-[15vh] object-bottom"
+                imgClasses: "rounded-xl top-[65vh] left-0 w-[100%] h-[15vh] object-bottom"
             },
             {
                 src: Picture2,
                 scale: scale5,
-                imgClasses: "rounded-xl top-[37.5vh] left-0 w-[20vw] h-[20.5vh] object-left"
+                imgClasses: "rounded-xl top-[37.5vh] left-0 w-[20%] h-[20.5vh] object-left"
             },
             {
                 src: Picture2,
                 scale: scale6,
-                imgClasses: "rounded-xl bottom-[37.5vh] right-0 w-[20vw] h-[37.5vh] object-right"
+                imgClasses: "rounded-xl bottom-[37.5vh] right-0 w-[20%] h-[37.5vh] object-right"
             }
         ]
 
@@ -68,12 +68,12 @@ const Masai = () => {
 
     return (
         <>
-            <div className='mt-16 mx-3'>
-                <NavTrail elements={elements} />
+            <div className='my-[12vh]'>
+                <NavTrail elements={elements} className='container' />
 
-                <h1 className='text-white text-4xl font-bold'>{RoutesPaths.CHARACTERS.MASAI.title}</h1>
+                <h1 className='container text-white text-4xl font-bold'>{RoutesPaths.CHARACTERS.MASAI.title}</h1>
 
-                <div ref={container} className="-mt-8 h-[300vh]">
+                <div ref={container} className="container-image-parallax">
                     <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
                         {pictures.map(({ src, scale, imgClasses }, index) => (
                             <motion.div key={index} style={{ scale }} className="absolute top-0 h-full w-full flex items-center justify-center">

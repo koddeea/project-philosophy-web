@@ -147,7 +147,6 @@ function Intro() {
                     animate='animate'
                     variants={initInterfaceVariants}
                 >
-                    <p className='font-sispany font-bold text-xl md:text-2xl lg:text-3xl text-white select-none'>G r u p o &nbsp; 5</p>
                 </motion.div>
 
                 <motion.div

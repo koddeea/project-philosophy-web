@@ -135,6 +135,10 @@
 	.text-title {
 		@apply text-[max(30px,calc(15px+2.34375vw))];
 	}
+
+    .container-image-parallax {
+        @apply -mt-8 h-[300vh] mx-3 sm:mx-[23%] md:mx-[39%];
+    }
 }
 
 body {

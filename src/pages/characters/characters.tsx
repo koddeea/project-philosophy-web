@@ -6,7 +6,7 @@ const Characters = () => {
 
     return (
         <>
-            <div className='mt-16 mx-3'>
+            <div className='my-[12vh] mx-3'>
                 <h1 className='text-white text-5xl font-extralight'>Personajes</h1>
             </div>
 

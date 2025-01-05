@@ -57,13 +57,13 @@ const Card = ({ card }: { card: CardType }) => {
     return (
         <Link to={card.path}>
             <div
-                className="group relative w-[90vw] h-[50vh] overflow-hidden "
+                className="group relative w-[90vw] h-[50vh] md:w-[30vw] md:h-[80vh] overflow-hidden "
             >
                 <div
                     style={{
                         backgroundImage: `url(${card.imageUrl})`,
                         backgroundSize: "cover",
-                        backgroundPosition: "center",
+                        backgroundPosition: "100% 10%",
                     }}
                     className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
                 />

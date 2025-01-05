@@ -32,7 +32,7 @@ La Vida, una fuerza a veces tan cruel como hermosa, ha sido quien ha dotado a ca
 const Home = () => {
 
     return (
-        <div className='text-white mt-[10vh] container characters-text'>
+        <div className='text-white my-[12vh] container characters-text'>
             <MarkdownRenderer texts={HomeTexts} />
         </div>
     );
